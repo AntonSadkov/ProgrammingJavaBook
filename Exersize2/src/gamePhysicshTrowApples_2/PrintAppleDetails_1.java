@@ -1,4 +1,4 @@
-package GamePhysicsThrowApples_2;
+package gamePhysicshTrowApples_2;
 
 public class PrintAppleDetails_1 {
     public static void main(String[] args) {

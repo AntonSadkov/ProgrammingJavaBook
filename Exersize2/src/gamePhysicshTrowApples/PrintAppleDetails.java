@@ -1,6 +1,4 @@
-package GamePhysicsThrowApples;
-
-import java.io.File;
+package gamePhysicshTrowApples;
 
 public class PrintAppleDetails {
     public static void main(String[] args) {

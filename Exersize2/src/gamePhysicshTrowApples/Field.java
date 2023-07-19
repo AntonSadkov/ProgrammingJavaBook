@@ -1,4 +1,4 @@
-package GamePhysicsThrowApples;
+package gamePhysicshTrowApples;
 
 public class Field {
     Apple a1 = new Apple();

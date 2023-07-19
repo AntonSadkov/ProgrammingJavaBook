@@ -1,6 +1,4 @@
-package GamePhysicsThrowApples_2;
-
-import java.util.Arrays;
+package gamePhysicshTrowApples_2;
 
 class Apple {
 

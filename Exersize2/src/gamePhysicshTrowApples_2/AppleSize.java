@@ -1,4 +1,4 @@
-package GamePhysicsThrowApples_2;
+package gamePhysicshTrowApples_2;
 
 class AppleSize {
     public static String[] getAppleSizes(){

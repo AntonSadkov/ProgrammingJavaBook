@@ -1,4 +1,4 @@
-package GamePhysicsThrowApples;
+package gamePhysicshTrowApples;
 
 class Apple {
     float mass;
