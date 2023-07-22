@@ -14,10 +14,6 @@ class HelloComponent2 extends JComponent
         addMouseMotionListener(this);
     }
 
-    public void paintComponent(Graphics g) {
-        g.drawString(theMessage, messageX, messageY);
-    }
-
     public void mouseDragged(MouseEvent e) {
         // Сохранить координаты мыши и перерисовать текст сообщения
         messageX = e.getX();
@@ -26,5 +22,9 @@ class HelloComponent2 extends JComponent
     }
 
     public void mouseMoved(MouseEvent e) {
+    }
+
+    public void paintComponent(Graphics g) {
+        g.drawString(theMessage, messageX, messageY);
     }
 }
