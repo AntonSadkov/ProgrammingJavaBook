@@ -21,6 +21,7 @@ public class Field extends JComponent {
     Tree tree1 = new Tree();
     Tree tree2 = new Tree();
     Tree tree3 = new Tree();
+    Tree tree4 = new Tree();
     Physicist physicist1 = new Physicist();
     Physicist physicist2 = new Physicist();
 
@@ -46,6 +47,7 @@ public class Field extends JComponent {
         tree1.setPosition(500,200);
         tree2.setPosition(700,600);
         tree3.setPosition(320,400);
+        tree4.setPosition(800,150);
     }
     public void setupPlayer(Physicist p) {
         physicist1.setPosition(100,790);
@@ -57,6 +59,7 @@ public class Field extends JComponent {
         tree1.draw(g);
         tree2.draw(g);
         tree3.draw(g);
+        tree4.draw(g);
         physicist1.draw(g);
         physicist2.draw(g);
         a1.draw(g);
