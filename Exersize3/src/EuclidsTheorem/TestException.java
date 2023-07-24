@@ -1,12 +1,14 @@
 package EuclidsTheorem;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static java.lang.Runtime.getRuntime;
+
 public class TestException {
     public static void main(String[] args) {
-        int a = 0;
-        int b = 0;
+        int a, b;
 
         try {
             Scanner in = new Scanner(System.in);
@@ -16,6 +18,7 @@ public class TestException {
             b = in.nextInt();
         } catch (InputMismatchException ime) {
             System.err.println("Пиши цифры!");
+            return;
         }
 
         if (args.length == 2) {
@@ -26,6 +29,8 @@ public class TestException {
                 System.err.println("""
                         Arguments were not both numbers.
                         Using defaults.""");
+            } finally {
+                System.out.println("Всё.");
             }
         } else {
             System.err.println("""
