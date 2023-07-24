@@ -1,10 +1,7 @@
 package EuclidsTheorem;
 
-import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-import static java.lang.Runtime.getRuntime;
 
 public class TestException {
     public static void main(String[] args) {
