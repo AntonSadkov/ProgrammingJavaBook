@@ -38,4 +38,8 @@ public class Field extends JComponent{
         tree.setPosition(x, y);
         trees.add(tree);
     }
+
+    public void addTree(Tree t){
+        trees.add(t);
+    }
 }
