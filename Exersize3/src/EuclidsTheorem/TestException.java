@@ -13,8 +13,13 @@ public class TestException {
             a = in.nextInt();
             System.out.print("b = ");
             b = in.nextInt();
+            assert a != 0;
+            assert b != 0;
         } catch (InputMismatchException ime) {
-            System.err.println("Пиши цифры!");
+            System.err.println("Вычисления проводяться только с цеыми числами!");
+            return;
+        } catch (AssertionError ae) {
+            System.err.println("Значение 0 недопустимо!");
             return;
         }
 
@@ -26,18 +31,14 @@ public class TestException {
                 System.err.println("""
                         Arguments were not both numbers.
                         Using defaults.""");
-            } finally {
-                System.out.println("Всё.");
             }
         } else {
-            System.err.println("""
-                    Wrong number of arguments (expected 2).
-                    Using defaults.""");
+            System.out.println("Ошибок нет!");
         }
         System.out.println("The GCD of " + a + " and " + b + " is ");
         while (b != 0) {
             if (a > b) {
-                a = a -b;
+                a = a - b;
             } else {
                 b = b - a;
             }
