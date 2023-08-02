@@ -11,8 +11,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Field extends JComponent implements ActionListener {
-    public static final float GRAVITY = 9.8f;  // feet per second per second
-    public static final int STEP = 40;   // duration of an animation frame in milliseconds
+    public static final float GRAVITY = 9.8f;
+    public static final int STEP = 40;
     public static final int APPLE_SIZE_IN_PIXELS = 30;
     public static final int TREE_WIDTH_IN_PIXELS = 60;
     public static final int TREE_HEIGHT_IN_PIXELS = 2 * TREE_WIDTH_IN_PIXELS;
@@ -24,7 +24,6 @@ public class Field extends JComponent implements ActionListener {
 
     Color fieldColor = Color.GRAY;
 
-    // ArrayList was covered in Generics chapter
     List<Physicist> physicists = Collections.synchronizedList(new ArrayList<>());
     List<Apple> apples = Collections.synchronizedList(new ArrayList<>());
     List<Tree> trees = Collections.synchronizedList(new ArrayList<>());
@@ -66,7 +65,6 @@ public class Field extends JComponent implements ActionListener {
             startAnimation();
         }
         if (animating) {
-            // Check to make sure we have an apple to toss
             if (physicist.aimingApple != null) {
                 Apple apple = physicist.takeApple();
                 apple.toss(physicist.aimingAngle, physicist.aimingForce);
@@ -93,21 +91,18 @@ public class Field extends JComponent implements ActionListener {
     }
 
     void detectCollisions(Apple apple) {
-        // Check for other apples
         for (Apple a : apples) {
             if (apple.isTouching(a)) {
                 System.out.println("Touching another apple!");
                 return;
             }
         }
-        // Check for physicists
         for (Physicist p : physicists) {
             if (apple.isTouching(p)) {
                 System.out.println("Touching a physicist!");
                 return;
             }
         }
-        // Check for trees
         for (Tree t : trees) {
             if (apple.isTouching(t)) {
                 System.out.println("Touching a tree!");
