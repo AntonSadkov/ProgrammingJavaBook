@@ -30,7 +30,7 @@ public class HelloMouse extends JFrame implements MouseListener{
     }
 
     @Override
-    public void mousePressed(MouseEvent e) {}
+    public void mousePressed(MouseEvent e) {label.setLocation(e.getX(),e.getY());}
     @Override
     public void mouseReleased(MouseEvent e) {}
     @Override
