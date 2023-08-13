@@ -25,16 +25,11 @@ public class LogicsReshala extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String[] texts = {"Да", "Нет", "Да", "Нет"};
+        String[] texts = {"Да", "Нет", "Да", "Нет", "Будет точно", "Мало вероятно", "Скоро"};
         Random random = new Random ();
         int pos = random.nextInt(texts.length);
         JOptionPane.showMessageDialog(this, texts[pos], "Результат решения",
                 JOptionPane.INFORMATION_MESSAGE);
         logicsReshala.setText("Попробуй ещё!");
-    }
-
-    public static void main(String[] args) {
-        LogicsReshala reshala = new LogicsReshala();
-        reshala.setVisible(true);
     }
 }
